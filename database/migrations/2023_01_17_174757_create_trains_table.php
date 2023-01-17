@@ -16,11 +16,11 @@ class CreateTrainsTable extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->mediumInteger('serial_code');
-            $table->string('operating_region');
-            $table->date('working_start_date');
-            $table->date('last_mainteinance');
-            $table->date('next_mainteinance');
-            $table->date('retirement_date');
+            $table->string('operating_region', 18);
+            $table->string('working_start_date', 10);
+            $table->string('last_mainteinance', 10);
+            $table->string('next_mainteinance', 10);
+            $table->string('retirement_date', 10);
             $table->timestamps();
         });
     }
